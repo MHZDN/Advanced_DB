@@ -178,21 +178,23 @@ def query_entry(xpath_or_xquery,xml_file):
         try:
             if xpath_or_xquery.startswith("//") or xpath_or_xquery.startswith("/"):  # XPath
                 result = xml_file.xpath(xpath_or_xquery)
-            # else:  # XQuery (assuming lxml)
-            #     result = xml_file.xpath(xpath_or_xquery)
+            else:
+                result = xml_file.xpath(xpath_or_xquery)
         except Exception:
             print("Un Valid Query!")
             return
-        
+        # print(result)
         if result:
                 query_recursion(result)
                     # print(item.text)  # Access element text
+        else:
+            print("The query is invalid")
         print("\n")
 
         while(True):
             choice = input("Would you Like to query Agian [y/n]")
             if choice.lower().strip() =='y':
-                xpath_or_xquery = str(input("Enter another Query Please")).strip()
+                xpath_or_xquery = str(input("Enter another Query Please  ")).strip()
                 break
             elif choice.lower().strip() =='n':
                 condition = False
@@ -233,7 +235,7 @@ if xml_tree is not None:
             print("Invalid choice!")
 
 print("Exiting...")
-
+# //hospital/Patients/Patient/address='Cairo'
 # //hospital/Departments/Department/dept_name
 # //Department[@dept_id='d8']/dept_name
 
