@@ -110,7 +110,7 @@ def recurse(Element,parent_indx,First_entry): #start with indx -1
 
     
 
-found_element = xml_root.find("Doctors")
+# found_element = xml_root.find("Doctors")
 
 # new_doctor = ET.Element("Doctor", attrib={"doctor_id": "d15" , "dept_id":"d9"})
 
@@ -120,10 +120,11 @@ found_element = xml_root.find("Doctors")
 # new_department_name.text = "Anesthesiology"
 
 # print(found_element)
-recurse(found_element,-1,First_entry)
+# recurse(found_element,-1,First_entry)
 
-found_element.append(ele_list[0])
-xml_tree.write("H.xml")
+# found_element.append(ele_list[0])
+print(xml_root.find("Doctors"))
+# xml_tree.write("H.xml")
 
 
 

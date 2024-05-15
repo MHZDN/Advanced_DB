@@ -125,18 +125,50 @@ def add_entry(First_entry,ele_list):
             else:
                 print("Invalid choice!")
 
-def delete_entry(tree, root, element_tag, element_id):
+# def delete_entry():
+#     condition = True
+#     while(condition):
+#         element_tag = input("Please enter the Element Tag you want to delete from  ").strip()
+#         if xml_root.findall(element_tag):
+#             # element_id =  input("Please enter the Element ID to to be deleted  ").strip()
+#             try:
+#                 for element in xml_root.findall(element_tag):
+#                     if element.attrib:
+#                         for ele in element.attrib.keys():
+#                             if element.get(ele) == element_id:
+#                                 xml_root.remove(element)
+#                                 xml_tree.write("Hospital_modified.xml")  # Write to a new file
+#                                 print(f"Entry in '{element_tag}' with ID:'{element_id}' successfully deleted!")                        
+#                 # print(f"Error: Entry with ID '{element_id}' not found.")
+#             except Exception as e:
+#                 print(f"Error deleting entry: {e}")
+#         else:
+#             print(f"The Element {element_tag} you want to delete from is not found! ")
+
+#         while(True):
+#             choice = input("Would you Like to Delete Agian [y/n]")
+#             if choice.lower().strip() =='y':
+#                 break
+#             elif choice.lower().strip() =='n':
+#                 condition = False
+#                 break
+#             else:
+#                 print("Invalid choice!")
+
+
+def query_recursion(items):
     
-    try:
-        for element in root.findall(element_tag):
-            if element.get("dept_id") == element_id or element.get("doctor_id") == element_id or element.get("patient_id") == element_id:
-                root.remove(element)
-                tree.write("Hospital_modified.xml")  # Write to a new file
-                print(f"Entry with ID '{element_id}' successfully deleted.")
-                return
-        print(f"Error: Entry with ID '{element_id}' not found.")
-    except Exception as e:
-        print(f"Error deleting entry: {e}")
+    for item in items:
+        if item.text.strip() == '':
+            if item.attrib:
+                print(f"{item.tag} <{item.attrib}> :")
+            else:
+                print(f"{item.tag}:")
+            query_recursion(item.findall("*"))
+        else:
+            print(f"{item.tag} : {item.text}")
+    print("--------------")
+
 
 def query_entry(xpath_or_xquery,xml_file):
 
@@ -146,15 +178,15 @@ def query_entry(xpath_or_xquery,xml_file):
         try:
             if xpath_or_xquery.startswith("//") or xpath_or_xquery.startswith("/"):  # XPath
                 result = xml_file.xpath(xpath_or_xquery)
-            else:  # XQuery (assuming lxml)
-                result = xml_file.xpath(xpath_or_xquery)
+            # else:  # XQuery (assuming lxml)
+            #     result = xml_file.xpath(xpath_or_xquery)
         except Exception:
             print("Un Valid Query!")
             return
         
         if result:
-            for item in result:
-                print(item.text)  # Access element text
+                query_recursion(result)
+                    # print(item.text)  # Access element text
         print("\n")
 
         while(True):
@@ -185,12 +217,12 @@ if xml_tree is not None:
         operation = input().strip()
 
         if operation.lower() == 'q':
-            query=str(input("please enter an xQuery or xPath for query\n")).strip()
+            query=str(input("please enter an xQuery or xPath for query : \n")).strip()
             query_entry(query,lxml_tree)
 
 
-        elif operation.lower() == 'd':
-            pass
+        # elif operation.lower() == 'd':
+        #     delete_entry()
 
         elif operation.lower() == 'w':
             add_entry(First_entry,ele_list)
@@ -202,7 +234,7 @@ if xml_tree is not None:
 
 print("Exiting...")
 
-# /hospital/Departments/Department/dept_name
+# //hospital/Departments/Department/dept_name
 # //Department[@dept_id='d8']/dept_name
 
    
