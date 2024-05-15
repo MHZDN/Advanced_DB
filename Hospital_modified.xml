@@ -1,0 +1,510 @@
+<hospital>
+
+<Departments>
+
+<Department dept_id="d1">
+<dept_name> Cardiology </dept_name>
+<contact_details> 0112345 </contact_details>
+</Department>
+
+<Department dept_id="d2">
+<dept_name> surgeon </dept_name>
+<contact_details> 0112356 </contact_details>
+</Department>
+
+<Department dept_id="d3">
+<dept_name> General Medicine</dept_name>
+<contact_details> 0122345 </contact_details>
+</Department>
+
+<Department dept_id="d4">
+<dept_name> neurology </dept_name>
+<contact_details> 0122356 </contact_details>
+</Department>
+
+<Department dept_id="d5">
+<dept_name> Psichiatry </dept_name>
+<contact_details> 0122357 </contact_details>
+</Department>
+
+<Department dept_id="d6">
+<dept_name> Pharmacist </dept_name>
+<contact_details> 0122358 </contact_details>
+</Department>
+
+<Department dept_id="d7">
+<dept_name> Haematology </dept_name>
+<contact_details> 0122367 </contact_details>
+</Department>
+
+<Department dept_id="d8">
+<dept_name> Physiotherapy </dept_name>
+<contact_details> 0122478 </contact_details>
+</Department>
+
+<Department dept_id="d9">
+<dept_name> Dietician </dept_name>
+<contact_details> 0122578 </contact_details>
+</Department>
+
+<Department dept_id="d10">
+<dept_name> Emergency Department </dept_name>
+<contact_details> 0123459 </contact_details>
+</Department>
+
+</Departments>
+
+<Doctors>
+
+<Doctor doctor_id="d1" dept_id="d1">
+<doctor_name> 
+<First_name> doc1 </First_name>
+<Last_name> name1 </Last_name>
+ </doctor_name>
+<speciality> Cardiologist </speciality>
+<contact_details> 
+<Email> doc1@gmail.com </Email>
+<phone_number>0122367 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d2" dept_id="d7">
+<doctor_name> 
+<First_name> doc2 </First_name>
+<Last_name> name2 </Last_name>
+ </doctor_name>
+<speciality> Haematologist </speciality>
+<contact_details> 
+<Email> doc2@gmail.com </Email>
+<phone_number>0122345 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d3" dept_id="d10">
+<doctor_name>  
+<First_name> doc3 </First_name>
+<Last_name> name3 </Last_name>
+</doctor_name>
+<speciality> Emergency </speciality>
+<contact_details> 
+<Email> doc3@Yahoo.com </Email>
+<phone_number>011234 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d4" dept_id="d2" Prescription_id="1">
+<doctor_name>  
+<First_name> Seif Eldin </First_name>
+<Last_name> Ashraf </Last_name>
+</doctor_name>
+<speciality> surgeon </speciality>
+<contact_details> 
+<Email> Seif@gmail.com </Email>
+<phone_number>01222510 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d5" dept_id="d6" Prescription_id="3">
+<doctor_name>  
+<First_name> Mohamed </First_name>
+<Last_name> Hesham </Last_name>
+</doctor_name>
+<speciality> Pharmacist </speciality>
+<contact_details> 
+<Email> Mohamed@gmail.com </Email>
+<phone_number>0121345 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d6" dept_id="d10">
+<doctor_name>  
+<First_name> Omar </First_name>
+<Last_name> Magdy </Last_name>
+</doctor_name>
+<speciality> Emergency </speciality>
+<contact_details> 
+<Email> Omar@Yahoo.com </Email>
+<phone_number>0101345 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d7" dept_id="d10" Prescription_id="2">
+<doctor_name> 
+<First_name> Mahmoud </First_name>
+<Last_name> Talaat </Last_name>
+ </doctor_name>
+<speciality> Emergency </speciality>
+<contact_details> 
+<Email> Mahmoud@Yahoo.com </Email>
+<phone_number>0109345 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d8" dept_id="d9" Prescription_id="1 4">
+<doctor_name> 
+<First_name> Youssef </First_name>
+<Last_name> ElNagy </Last_name>
+ </doctor_name>
+<speciality> Dietician </speciality>
+<contact_details> 
+<Email> Youssef1@gmail.com </Email>
+<phone_number>0108345 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d9" dept_id="d1">
+<doctor_name> 
+<First_name> Youssef </First_name>
+<Last_name> Mohamed </Last_name>
+ </doctor_name>
+<speciality> Cardiologist </speciality>
+<contact_details> 
+<Email> Youssef2@Yahoo.com </Email>
+<phone_number>0107345 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d10" dept_id="d8" Prescription_id="7">
+<doctor_name> 
+<First_name> Abdelrahman </First_name>
+<Last_name> Ayman </Last_name>
+ </doctor_name>
+<speciality> Physiotherapist </speciality>
+<contact_details> 
+<Email> Abdelrahman@gmail.com </Email>
+<phone_number>01117345 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d11" dept_id="d2" Prescription_id="2">
+<doctor_name> 
+<First_name> Seif Eldin </First_name>
+<Last_name> Mahmoud </Last_name>
+ </doctor_name>
+<speciality> surgeon </speciality>
+<contact_details> 
+<Email> S@gmail.com </Email>
+<phone_number>01112245 </phone_number>
+ </contact_details>
+</Doctor>
+
+
+<Doctor doctor_id="d12" dept_id="d4">
+<doctor_name> 
+<First_name> doc4 </First_name>
+<Last_name> name1 </Last_name>
+ </doctor_name>
+<speciality> neurologist </speciality>
+<contact_details> 
+<Email> doc4@gmail.com </Email>
+<phone_number>01162245 </phone_number>
+ </contact_details>
+</Doctor>
+
+
+<Doctor doctor_id="d13" dept_id="d3" Prescription_id="6">
+<doctor_name> 
+<First_name> doc1 </First_name>
+<Last_name> name6 </Last_name>
+ </doctor_name>
+<speciality> General Medicine </speciality>
+<contact_details> 
+<Email> doc11@gmail.com </Email>
+<phone_number>01262245 </phone_number>
+ </contact_details>
+</Doctor>
+
+<Doctor doctor_id="d14" dept_id="d5" Prescription_id="5">
+<doctor_name> 
+<First_name> Abdelrahman </First_name>
+<Last_name> Ayman </Last_name>
+ </doctor_name>
+<speciality> Psichiatrist </speciality>
+<contact_details> 
+<Email> Ayman@gmail.com </Email>
+<phone_number>0129876 </phone_number>
+ </contact_details>
+</Doctor>
+
+</Doctors>
+<Patients>
+    <Patient Patient_id="1" Prescription_id="1">
+        <Patient_name>
+            <First_Name>Mohamed</First_Name>
+            <Last_Name>Mohamed</Last_Name>
+        </Patient_name>
+        <gender>Male</gender>
+        <date_of_birth>2000-01-25</date_of_birth>
+        <address>Cairo</address>
+        <contact_details>012245</contact_details>
+    </Patient>
+
+    <Patient Patient_id="2" Prescription_id="7">
+        <Patient_name>
+            <First_Name>Ahmed</First_Name>
+            <Last_Name>Mohamed</Last_Name>
+        </Patient_name>
+        <gender>Male</gender>
+        <date_of_birth>1978-01-25</date_of_birth>
+        <address>Giza</address>
+        <contact_details>0121145</contact_details>
+    </Patient>
+
+    <Patient Patient_id="3" Prescription_id="2 5">
+        <Patient_name>
+            <First_Name>Mohamed</First_Name>
+            <Last_Name>Ahmed</Last_Name>
+        </Patient_name>
+        <gender>Male</gender>
+        <date_of_birth>2003-07-02</date_of_birth>
+        <address>Cairo</address>
+        <contact_details>012295</contact_details>
+    </Patient>
+
+    <Patient Patient_id="4">
+        <Patient_name>
+            <First_Name>Patient1</First_Name>
+            <Last_Name>name1</Last_Name>
+        </Patient_name>
+        <gender>Female</gender>
+        <date_of_birth>1999-05-05</date_of_birth>
+        <address>Cairo</address>
+        <contact_details>011190</contact_details>
+    </Patient>
+
+    <Patient Patient_id="5" Prescription_id="1">
+        <Patient_name>
+            <First_Name>Patient2</First_Name>
+            <Last_Name>Name2</Last_Name>
+        </Patient_name>
+        <gender>Female</gender>
+        <date_of_birth>2001-03-02</date_of_birth>
+        <address>Giza</address>
+        <contact_details>011245</contact_details>
+    </Patient>
+
+    <Patient Patient_id="6">
+        <Patient_name>
+            <First_Name>Patient3</First_Name>
+            <Last_Name>Name3</Last_Name>
+        </Patient_name>
+        <gender>Male</gender>
+        <date_of_birth>2002-09-01</date_of_birth>
+        <address>Alexandria</address>
+        <contact_details>019905</contact_details>
+    </Patient>
+
+    <Patient Patient_id="7" Prescription_id="6">
+        <Patient_name>
+            <First_Name>Patient3</First_Name>
+            <Last_Name>Name4</Last_Name>
+        </Patient_name>
+        <gender>Female</gender>
+        <date_of_birth>2002-09-08</date_of_birth>
+        <address>Alexandria</address>
+        <contact_details>0102345</contact_details>
+    </Patient>
+
+    <Patient Patient_id="8" Prescription_id="3">
+        <Patient_name>
+            <First_Name>Patient4</First_Name>
+            <Last_Name>Mohamed</Last_Name>
+        </Patient_name>
+        <gender>Male</gender>
+        <date_of_birth>1980-03-30</date_of_birth>
+        <address>Cairo</address>
+        <contact_details>0122905</contact_details>
+    </Patient>
+
+    <Patient Patient_id="9" Prescription_id="4">
+        <Patient_name>
+            <First_Name>Patient5</First_Name>
+            <Last_Name>Name5</Last_Name>
+        </Patient_name>
+        <gender>Female</gender>
+        <date_of_birth>1980-03-30</date_of_birth>
+        <address>Giza</address>
+        <contact_details>0125905</contact_details>
+    </Patient>
+
+    <Patient Patient_id="10" Prescription_id="2">
+        <Patient_name>
+            <First_Name>Patient6</First_Name>
+            <Last_Name>Name6</Last_Name>
+        </Patient_name>
+        <gender>Female</gender>
+        <date_of_birth>1990-03-30</date_of_birth>
+        <address>Cairo</address>
+        <contact_details>01225905</contact_details>
+    </Patient>
+
+    <Patient Patient_id="11" Prescription_id="3">
+        <Patient_name>
+            <First_Name>Patient7</First_Name>
+            <Last_Name>Name7</Last_Name>
+        </Patient_name>
+        <gender>Male</gender>
+        <date_of_birth>1995-11-15</date_of_birth>
+        <address>Cairo</address>
+        <contact_details>01225935</contact_details>
+    </Patient>
+
+</Patients>
+
+<Prescriptions>
+    <Prescription Prescription_id="1" Patient_id="1 5" Doctor_id="d4 d8">
+        <Prescription_date>2024-11-12</Prescription_date>
+        <medication_details>
+            <name>name1</name>
+            <dose>100</dose>
+            <duration>50</duration>
+        </medication_details>
+    </Prescription>
+
+    <Prescription Prescription_id="2" Patient_id="3 10" Doctor_id="d7 d11">
+        <Prescription_date>2024-01-14</Prescription_date>
+        <medication_details>
+            <name>name2</name>
+            <dose>50</dose>
+            <duration>20</duration>
+        </medication_details>
+    </Prescription>
+
+    <Prescription Prescription_id="3" Patient_id="8 11" Doctor_id="d5">
+        <Prescription_date>2024-02-15</Prescription_date>
+        <medication_details>
+            <name>name3</name>
+            <dose>150</dose>
+            <duration>60</duration>
+        </medication_details>
+    </Prescription>
+
+    <Prescription Prescription_id="4" Patient_id="9" Doctor_id="d8">
+        <Prescription_date>2024-07-02</Prescription_date>
+        <medication_details>
+            <name>name4</name>
+            <dose>200</dose>
+            <duration>5</duration>
+        </medication_details>
+    </Prescription>
+
+    <Prescription Prescription_id="5" Patient_id="3" Doctor_id="d14">
+        <Prescription_date>2024-05-17</Prescription_date>
+        <medication_details>
+            <name>name5</name>
+            <dose>250</dose>
+            <duration>15</duration>
+        </medication_details>
+    </Prescription>
+
+    <Prescription Prescription_id="6" Patient_id="7" Doctor_id="d13">
+        <Prescription_date>2024-06-19</Prescription_date>
+        <medication_details>
+            <name>name6</name>
+            <dose>350</dose>
+            <duration>10</duration>
+        </medication_details>
+    </Prescription>
+
+    <Prescription Prescription_id="7" Patient_id="2" Doctor_id="d10">
+        <Prescription_date>2024-06-19</Prescription_date>
+        <medication_details>
+            <name>name7</name>
+            <dose>150</dose>
+            <duration>15</duration>
+        </medication_details>
+    </Prescription>
+
+</Prescriptions>
+
+<Medical_records>
+
+<Medical_record Medical_record_id="1" Patient_id="5" Department_id="3" Doctor_id="d10">   
+<diagnosis>diagnosis1</diagnosis>
+<treatment_details>treatment1</treatment_details>
+<visited_date>2023-06-02</visited_date>
+</Medical_record>
+
+<Medical_record Medical_record_id="2" Patient_id="2" Department_id="5" Doctor_id="d10">   
+    <diagnosis>diagnosis1</diagnosis>
+    <treatment_details>treatment1</treatment_details>
+    <visited_date>2024-03-02</visited_date>
+    </Medical_record>
+
+    <Medical_record Medical_record_id="3" Patient_id="5" Department_id="10" Doctor_id="d13">   
+        <diagnosis>diagnosis2</diagnosis>
+        <treatment_details>treatment2</treatment_details>
+        <visited_date>2024-03-10</visited_date>
+        </Medical_record>
+
+        <Medical_record Medical_record_id="4" Patient_id="10" Department_id="5" Doctor_id="d2">   
+            <diagnosis>diagnosis3</diagnosis>
+            <treatment_details>treatment3</treatment_details>
+            <visited_date>2024-03-10</visited_date>
+            </Medical_record>
+
+            <Medical_record Medical_record_id="5" Patient_id="1" Department_id="8" Doctor_id="d5">   
+                <diagnosis>diagnosis4</diagnosis>
+                <treatment_details>treatment3</treatment_details>
+                <visited_date>2024-10-10</visited_date>
+                </Medical_record>
+
+                <Medical_record Medical_record_id="6" Patient_id="9" Department_id="7" Doctor_id="d14">   
+                    <diagnosis>diagnosis4</diagnosis>
+                    <treatment_details>treatment4</treatment_details>
+                    <visited_date>2024-11-20</visited_date>
+                    </Medical_record>
+
+                    <Medical_record Medical_record_id="7" Patient_id="10" Department_id="2" Doctor_id="d9">   
+                        <diagnosis>diagnosis5</diagnosis>
+                        <treatment_details>treatment5</treatment_details>
+                        <visited_date>2024-09-19</visited_date>
+                        </Medical_record>
+
+</Medical_records>
+
+<Appointments>
+
+<Appointment Appointment_id="1" Patient_id="5" Doctor_id="d10">
+<appointment_date>2024-12-09</appointment_date>
+<appointment_time>9 Am</appointment_time>
+</Appointment>
+
+<Appointment Appointment_id="2" Patient_id="7" Doctor_id="d14">
+    <appointment_date>2024-12-09</appointment_date>
+    <appointment_time>9 Am</appointment_time>
+    </Appointment>
+
+    <Appointment Appointment_id="3" Patient_id="8" Doctor_id="d11">
+        <appointment_date>2024-12-09</appointment_date>
+        <appointment_time>10 Am</appointment_time>
+        </Appointment>
+
+        <Appointment Appointment_id="3" Patient_id="10" Doctor_id="d11">
+            <appointment_date>2024-12-09</appointment_date>
+            <appointment_time>12 pm</appointment_time>
+            </Appointment>
+
+            <Appointment Appointment_id="4" Patient_id="7" Doctor_id="d1">
+                <appointment_date>2024-11-09</appointment_date>
+                <appointment_time>1 pm</appointment_time>
+                </Appointment>
+
+                <Appointment Appointment_id="5" Patient_id="3" Doctor_id="d12">
+                    <appointment_date>2024-05-25</appointment_date>
+                    <appointment_time>6 pm</appointment_time>
+                    </Appointment>
+
+                    <Appointment Appointment_id="6" Patient_id="7" Doctor_id="d14">
+                        <appointment_date>2024-11-09</appointment_date>
+                        <appointment_time>9 Am</appointment_time>
+                        </Appointment>
+
+                        <Appointment Appointment_id="7" Patient_id="1" Doctor_id="d1">
+                            <appointment_date>2024-07-10</appointment_date>
+                            <appointment_time>7 pm</appointment_time>
+                            </Appointment>
+
+</Appointments>
+
+</hospital>

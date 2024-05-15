@@ -1,0 +1,165 @@
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <xsd:element name="hospital" type="HospitalType"/>
+    <xsd:element name="Departments" type="DepartmentsType"/>
+    <xsd:element name="Doctors" type="DoctorsType"/>
+    <xsd:element name="Patients" type="PatientsType"/>
+    <xsd:element name="Prescriptions" type="PrescriptionsType"/>
+    <xsd:element name="Medical_records" type="Medical_recordsType"/>
+    <xsd:element name="Appointments" type="AppointmentsType"/>
+
+
+<xsd:element name ="Department">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name = "dept_name" type = "xsd:string"/>
+            <xsd:element name = "contact_details" type = "xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name = "dept_id" type = "xsd:string" use = "required"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name = "Doctor">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name ="doctor_name">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="First_name" type="xsd:string"/>
+                        <xsd:element name="Last_name" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name = "speciality" type="xsd:string"/>
+
+            <xsd:element name ="contact_details">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="Email" type="xsd:string"/>
+                        <xsd:element name="phone_number" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name="doctor_id" type="xsd:string" use="required"/>
+        <xsd:attribute name = "dept_id" type = "xsd:string" use="required"/>
+        <xsd:attribute name = "Prescription_id" type="xsd:string"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name = "Patient">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name ="Patient_name">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="First_Name" type="xsd:string"/>
+                        <xsd:element name="Last_Name" type="xsd:string"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+            <xsd:element name = "gender" type="xsd:string"/>
+            <xsd:element name = "date_of_birth" type="xsd:date"/>
+            <xsd:element name = "address" type="xsd:string"/>
+            <xsd:element name ="contact_details" type = "xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name="Patient_id" type="xsd:string" use="required"/>
+        <xsd:attribute name = "Prescription_id" type="xsd:string"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name ="Prescription">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name = "Prescription_date" type = "xsd:date"/>
+            <xsd:element name ="medication_details">
+                <xsd:complexType>
+                    <xsd:sequence>
+                        <xsd:element name="name" type="xsd:string"/>
+                        <xsd:element name="dose" type="xsd:integer"/>
+                        <xsd:element name = "duration" type="xsd:integer"/>
+                    </xsd:sequence>
+                </xsd:complexType>
+            </xsd:element>
+        </xsd:sequence>
+        <xsd:attribute name = "Prescription_id" type = "xsd:string" use="required"/>
+        <xsd:attribute name = "Patient_id" type = "xsd:string" use="required"/>
+        <xsd:attribute name = "Doctor_id" type = "xsd:string" use="required"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name="Medical_record">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name="diagnosis" type = "xsd:string"/>
+            <xsd:element name="treatment_details" type="xsd:string"/>
+            <xsd:element name="visited_date" type="xsd:date"/>
+        </xsd:sequence>
+        <xsd:attribute name = "Medical_record_id" type="xsd:string" use="required"/>
+        <xsd:attribute name = "Department_id" type="xsd:string" use="required"/>
+        <xsd:attribute name = "Patient_id" type = "xsd:string" use="required"/>
+        <xsd:attribute name = "Doctor_id" type = "xsd:string" use="required"/>
+    </xsd:complexType>
+</xsd:element>
+
+<xsd:element name ="Appointment">
+    <xsd:complexType>
+        <xsd:sequence>
+            <xsd:element name = "appointment_date" type = "xsd:date"/>
+            <xsd:element name = "appointment_time" type = "xsd:string"/>
+        </xsd:sequence>
+        <xsd:attribute name = "Appointment_id" type = "xsd:string" use = "required"/>
+        <xsd:attribute name = "Patient_id" type = "xsd:string" use="required"/>
+        <xsd:attribute name = "Doctor_id" type = "xsd:string" use="required"/>
+    </xsd:complexType>
+</xsd:element>
+
+
+
+    <xsd:complexType name="HospitalType">
+        <xsd:sequence>
+            <xsd:element ref = "Departments" />
+            <xsd:element ref = "Doctors" />
+            <xsd:element ref = "Patients" />
+            <xsd:element ref = "Prescriptions" />
+            <xsd:element ref = "Medical_records" />
+            <xsd:element ref = "Appointments" />
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="DepartmentsType">
+        <xsd:sequence>
+            <xsd:element ref = "Department"  minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="DoctorsType">
+        <xsd:sequence>
+            <xsd:element ref = "Doctor"  minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="PatientsType">
+        <xsd:sequence>
+            <xsd:element ref = "Patient"  minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="PrescriptionsType">
+        <xsd:sequence>
+            <xsd:element ref = "Prescription"  minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="Medical_recordsType">
+        <xsd:sequence>
+            <xsd:element ref = "Medical_record"  minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+    <xsd:complexType name="AppointmentsType">
+        <xsd:sequence>
+            <xsd:element ref = "Appointment"  minOccurs="1" maxOccurs="unbounded"/>
+        </xsd:sequence>
+    </xsd:complexType>
+
+</xsd:schema>
