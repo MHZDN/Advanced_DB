@@ -69,7 +69,7 @@ def recurse(Element,parent_indx,First_entry): #start with indx -1
             recurse(d[ele],new_parent_indx,First_entry)
 
 
-        #dont forget that text are always the leaf nodes
+        # dont forget that text are always the leaf nodes
 
         else: 
             txt = input(f"Enter the value for the element {ele} = ").strip() 
@@ -204,7 +204,7 @@ def query_entry(xpath_or_xquery,xml_file):
 
 # Main program flow
 plain_name = "Hospital"
-filename = "Hospital.xml"  # Replace with your actual filename
+filename = "Hospital.xml"  
 schema = "Hospital.xsd" 
 xml_tree, xml_root, lxml_tree, lxml_root = load_xml(filename)
 
@@ -235,9 +235,13 @@ if xml_tree is not None:
             print("Invalid choice!")
 
 print("Exiting...")
-# //hospital/Patients/Patient/address='Cairo'
-# //hospital/Departments/Department/dept_name
-# //Department[@dept_id='d8']/dept_name
 
-   
+
+# Queries:
+# /hospital/Doctors/Doctor[@doctor_id='d12' and @dept_id='d4']
+# /hospital/Patients/Patient[date_of_birth = '1990-03-30']
+# /hospital/Patients/Patient[address = 'Giza' or address = 'Alexandria']
+# /hospital/Prescriptions/Prescription/medication_details[duration='15' or dose = '150']
+# /hospital/Appointments/Appointment[@Doctor_id = 'd11']
+
 

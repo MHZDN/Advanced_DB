@@ -226,7 +226,20 @@
  </contact_details>
 </Doctor>
 
+<Doctor doctor_id="d15" dept_id="d3">
+<doctor_name>
+<First_name>Ahmed</First_name>
+<Last_name>Kamal</Last_name>
+</doctor_name>
+<speciality>Surigion</speciality>
+<contact_details>
+<Email>xyz@gamil.com</Email>
+<phone_number>01032453442
+</phone_number></contact_details>
+</Doctor>
+
 </Doctors>
+
 <Patients>
     <Patient Patient_id="1" Prescription_id="1">
         <Patient_name>
